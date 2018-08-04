@@ -1,1 +1,1 @@
->  demo:[＼こんにちは／](https://debugging.work){:target="_blank"}
+>  demo:https://debugging.work
