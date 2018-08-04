@@ -1,1 +1,1 @@
->  demo:<a href="https://debugging.work">＼こんにちは／</a>
+>  demo:<a href="https://debugging.work" target="_blank">＼こんにちは／</a>
