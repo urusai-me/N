@@ -26,6 +26,7 @@
     padding:0;
     margin:0;
     background:#ff96ad;
+    overflow:hidden;
 }
 /*设置元素被选中时的样式*/
 ::selection {
