@@ -1,4 +1,5 @@
-﻿@keyframes blurIn{
+/*定义动画，从清晰到模糊*/
+@keyframes blurIn{
     from {
         filter:none;
     }
@@ -6,6 +7,7 @@
         filter:blur(6px) brightness(85%);
     }
 }
+/*定义动画更改背景颜色*/
 @keyframes lightUp{
     from {
         background:rgba(255,255,255,.3);
@@ -14,17 +16,10 @@
         background:rgba(255,255,255,.4);
     }
 }
+/*定义动画，旋转*/
 @keyframes roll {
     from {transform:rotate(0deg);}
     to {transform:rotate(-360deg);}
-}
-@keyframes fadeIn{
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 100%;
-    }
 }
 
 #body{
@@ -32,7 +27,7 @@
     margin:0;
     background:#ff96ad;
 }
-
+/*设置元素被选中时的样式*/
 ::selection {
 	background-color: #ff96ad;
     color: #ffffff;
@@ -49,11 +44,12 @@ body {
   overflow: auto;
 }
 
+
 a{
     color:white;
     font-size:22px;
 }
-
+/*设置#div的样式，隐藏#div2溢出的部分*/
 #div{
     height:100vh;
     overflow:hidden;
@@ -74,6 +70,7 @@ a{
     box-shadow:rgba(0,0,0,.2) 0 2px 2px 0;
 }
 
+/*移动设备样式*/
 @media all and (max-aspect-ratio:3/4){
     #div1 {
     width:80%;
@@ -99,6 +96,7 @@ top:14%!important;
 }
 }
 
+/*把#div2扩大1.1倍，以免模糊动画生效时背景图片四周产生白边，由于扩大了1.1倍，需要在ID为#div的父元素中隐藏溢出部份*/
 #div2{
     background:url(background.jpg) center no-repeat;
     background-size:cover;
@@ -134,6 +132,7 @@ img.touxiang{
     background:#ff96ad;
 }
 
+/*头像图片绑定旋转动画*/
 img.touxiang:hover{
     filter:brightness(110%);
     animation :roll .3s forwards;
@@ -156,10 +155,12 @@ img.touxiang:hover{
     padding-top:10px;
 }
 
+/*光标焦点在#div1时，#div2变暗和模糊*/
 #div1:hover + #div2, #div1:active + #div2{
     animation: blurIn .2s ease-out forwards;
 }
 
+/*光标焦点在#div1时，提高其背景亮度*/
 #div1:hover {
     animation: lightUp .2s ease-out forwards;
 }
@@ -171,6 +172,7 @@ img.shejiao{
     z-index:3;
 }
 
+/*光标焦点在社交图标时，降低该图标的亮度*/
 img.shejiao:hover{
     filter:brightness(90%);
 }
