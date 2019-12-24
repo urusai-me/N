@@ -16,8 +16,8 @@
     }
 }
 @keyframes roll {
-    from {transform:rotate(0deg);}
-    to {transform:rotate(-360deg);}
+    from {transform:rotate(0deg) scale(1);border: solid 3px;}
+    to {transform:rotate(-360deg) scale(1.1);border:#f2b244 solid 3px;}
 }
 @keyframes fadeIn{
     from {
@@ -53,7 +53,7 @@
 #body{
     padding:0;
     margin:0;
-    background:#052742;
+    background:#f2b244;
     overflow:hidden;
 }
 
@@ -100,11 +100,12 @@ a{
 }
 
 #div2{
-    background:url(0.png) center no-repeat;
+    background:url(/api/bing/) center no-repeat;
     background-size:cover!important;
     height:100vh!important;
     z-index:0!important;
     transform:scale(1.1)!important;
+    filter: blur(14px)!important;
 }
 
 #touxiang{
@@ -161,11 +162,11 @@ img.touxiang:hover{
     padding-bottom:150px;
     padding-top:36px;
 }
-
+/*
 #div1:hover + #div2, #div1:active + #div2{
     animation: blurIn .2s forwards!important;
 }
-
+*/
 #div1:hover {
     animation: lightUp .2s forwards;
 }
